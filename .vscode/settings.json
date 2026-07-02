@@ -4,7 +4,7 @@
   "idf.openOcdConfigs": [
     "board/esp32s3-builtin.cfg"
   ],
-  "idf.portWin": "detect",
+  "idf.portWin": "COM5",
   "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32s3"
@@ -14,5 +14,6 @@
     "--background-index",
     "--query-driver=**",
     "--compile-commands-dir=c:\\Users\\liamj\\OneDrive - The University of Queensland\\Documents\\programing\\QLD Public Transport Departure Board\\build"
-  ]
+  ],
+  "idf.flashType": "UART"
 }
