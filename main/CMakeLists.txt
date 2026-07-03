@@ -1,2 +1,2 @@
-idf_component_register(SRCS "main.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(SRCS "main.c" "wifi_manager.c"
+                    INCLUDE_DIRS "." "${CMAKE_BINARY_DIR}")
