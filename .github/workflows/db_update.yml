@@ -3,7 +3,7 @@ name: Build GTFS Database
 on:
   workflow_dispatch:
     inputs:
-      gtfs-url:
+      url:
         description: 'source url'
         required: true
       stop-ids:
@@ -19,7 +19,7 @@ jobs:
         uses: quackers19/Translink-GTFS-Schedule-Pipeline@v1
 
         with:
-          gtfs-url: '${{ github.event.inputs.gtfs-url }}'
+          gtfs-url: '${{ github.event.inputs.url }}'
           output: 'gtfs-${{ github.event.inputs.stop-ids }}.db'
           stop-ids: '${{ github.event.inputs.stop-ids }}'
       
