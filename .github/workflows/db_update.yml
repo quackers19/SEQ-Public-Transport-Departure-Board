@@ -1,0 +1,30 @@
+name: Build GTFS Database
+
+on:
+  workflow_dispatch:
+    inputs:
+      gtfs-url:
+        description: 'source url'
+        required: true
+      stop-ids:
+        description: 'stops to include'
+        required: true
+jobs:
+  build-db:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      
+      - name: Build GTFS
+        uses: quackers19/Translink-GTFS-Schedule-Pipeline@v1.0.0
+
+        with:
+          gtfs-url: '${{ github.event.inputs.gtfs-url }}'
+          output: 'gtfs-${{ github.event.inputs.stop-ids }}.db'
+          stop-ids: '${{ github.event.inputs.stop-ids }}'
+      
+      - name: Upload Database
+        uses: actions/upload-artifact@v7
+        with:
+          name: gtfs-${{ github.event.inputs.stop-ids }}
+          path: gtfs-${{ github.event.inputs.stop-ids }}.db
