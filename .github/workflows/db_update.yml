@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v7
       
       - name: Build GTFS
-        uses: quackers19/Translink-GTFS-Schedule-Pipeline@v1.0.0
+        uses: quackers19/Translink-GTFS-Schedule-Pipeline@v1
 
         with:
           gtfs-url: '${{ github.event.inputs.gtfs-url }}'
