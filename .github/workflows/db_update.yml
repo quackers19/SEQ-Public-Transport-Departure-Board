@@ -19,7 +19,7 @@ jobs:
         uses: quackers19/Translink-GTFS-Schedule-Pipeline@v1
 
         with:
-          gtfs-url: '${{ github.event.inputs.url }}'
+          url: '${{ github.event.inputs.url }}'
           output: 'gtfs-${{ github.event.inputs.stop-ids }}.db'
           stop-ids: '${{ github.event.inputs.stop-ids }}'
       
