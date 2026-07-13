@@ -18,7 +18,6 @@ void app_main(void)
 
     while (1)
     {
-        wifi_check_connection();
 
 
         vTaskDelay(pdMS_TO_TICKS(5000));
