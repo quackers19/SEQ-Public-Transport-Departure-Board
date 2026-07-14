@@ -15,3 +15,4 @@ dependencies:
   #   # All dependencies of `main` are public by default.
   #   public: true
   nikas-belogolov/nanopb: ^1.0.0
+  lvgl/lvgl: ^9.5.0
