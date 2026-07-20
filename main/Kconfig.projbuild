@@ -1,4 +1,4 @@
-menu "Secrets Configuration"
+menu "Project Configuration"
 
     config WIFI_SSID
         string "WiFi SSID"
@@ -12,4 +12,30 @@ menu "Secrets Configuration"
         help
             Password for the WiFi network.
 
+    config STOPS
+        string "source tops to show"
+        default ""
+        help
+            Comma seperated list of stops
+
+    config GITHUB_OWNER
+        string "GitHub repository owner"
+        default "your-username"
+        help
+            The GitHub username or organization that owns the repository.
+
+    config GITHUB_REPO
+        string "GitHub repository name"
+        default "your-repo"
+        help
+            The name of the repository to check for artifacts.
+
+    config GITHUB_TOKEN
+        string "GitHub personal access token"
+        default ""
+        help
+            Personal access token with 'actions:read' scope, used to
+            authenticate against the GitHub API and avoid the 60
+            requests/hour unauthenticated rate limit. Leave blank to
+            make unauthenticated requests.
 endmenu

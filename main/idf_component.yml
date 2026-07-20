@@ -16,3 +16,4 @@ dependencies:
   #   public: true
   nikas-belogolov/nanopb: ^1.0.0
   lvgl/lvgl: ^9.5.0
+  espressif/cjson: ^1.7.19~2

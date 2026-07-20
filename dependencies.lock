@@ -1,8 +1,25 @@
 dependencies:
+  espressif/cjson:
+    component_hash: e788323270d90738662d66fffa910bfe1fba019bba087f01557e70c40485b469
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.7.19~2
   idf:
     source:
       type: idf
-    version: 6.0.1
+    version: 6.0.2
+  lvgl/lvgl:
+    component_hash: 184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 9.5.0
   nikas-belogolov/nanopb:
     component_hash: f87bec16ffb47d5ceb557b7f13acb83cad95046ab155d1af33e488d1b048fddc
     dependencies:
@@ -14,8 +31,10 @@ dependencies:
       type: service
     version: 1.0.0
 direct_dependencies:
+- espressif/cjson
 - idf
+- lvgl/lvgl
 - nikas-belogolov/nanopb
-manifest_hash: 634033ea82ff5793b6e43b62852be0df6167ca49856881bc40f8e79e99a6853a
+manifest_hash: 0231ee8989c2d7673b5c5fc13fd690eb8eca879887b68e3f1b503b75696ed2ec
 target: esp32s3
 version: 3.0.0
